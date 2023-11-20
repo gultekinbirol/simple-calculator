@@ -1,2 +1,2 @@
-<h1> DEMO </h1>
-[ios-calculator-hyfbe.netlify.app](https://ios-calculator-hyfbe.netlify.app/)https://ios-calculator-hyfbe.netlify.app/
+<h1>DEMO</h1>
+https://ios-calculator-hyfbe.netlify.app/
