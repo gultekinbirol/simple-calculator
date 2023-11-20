@@ -2,41 +2,83 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <link rel="stylesheet" href="./styles/style.css" />
         <title>Calculator</title>
     </head>
     <body>
         <div class="container">
-            <input type="text" class="display" />
-            <!-- Add your classes or ids -->
+            <input
+                id="display"
+                type="text"
+                placeholder=""
+                readonly="readonly"
+            />
             <div class="buttons">
-                <button>AC</button>
-                <button>DEL</button>
-                <button>%</button>
-                <button>/</button>
+                <button
+                    value="AC"
+                    id="all-clear"
+                    class="btn btn-gray txt-black"
+                >
+                    AC
+                </button>
+                <button
+                    value="DEL"
+                    id="delete"
+                    class="btn icon btn-gray txt-black fa-solid fa-delete-left"
+                ></button>
+                <button
+                    value="%"
+                    id="percent"
+                    class="btn operator icon btn-gray txt-black fa-solid fa-percent"
+                ></button>
+                <button
+                    value="/"
+                    class="btn operator icon btn-orange fa-solid fa-divide"
+                ></button>
 
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>*</button>
+                <button value="7" class="btn btn-black">7</button>
+                <button value="8" class="btn btn-black">8</button>
+                <button value="9" class="btn btn-black">9</button>
+                <button
+                    value="*"
+                    class="btn icon operator btn-orange fa-solid fa-xmark"
+                ></button>
 
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
+                <button value="4" class="btn btn-black">4</button>
+                <button value="5" class="btn btn-black">5</button>
+                <button value="6" class="btn btn-black">6</button>
+                <button
+                    value="-"
+                    class="btn icon operator btn-orange fa-solid fa-minus"
+                ></button>
 
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>+</button>
+                <button value="1" class="btn btn-black">1</button>
+                <button value="2" class="btn btn-black">2</button>
+                <button value="3" class="btn btn-black">3</button>
+                <button
+                    value="+"
+                    class="btn icon operator btn-orange fa-solid fa-plus"
+                ></button>
 
-                <button>0</button>
-                <button>00</button>
-                <button>.</button>
-                <button></button>
+                <button value="0" id="zero" class="btn btn-black">0</button>
+                <button value="," id="decimal" class="btn icon btn-black">
+                    .
+                </button>
+                <button
+                    value="="
+                    id="equal"
+                    class="btn icon operator btn-orange fa-solid fa-equals"
+                ></button>
             </div>
         </div>
+        <script
+            src="https://kit.fontawesome.com/217c991633.js"
+            crossorigin="anonymous"
+        ></script>
         <script src="./src/main.js"></script>
     </body>
 </html>

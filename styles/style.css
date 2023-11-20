@@ -1,17 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@font-face {
+    font-family: 'San Francisco';
+    src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff');
+    font-weight: 700;
+    font-display: swap;
+}
 
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
+    touch-action: pan-x pan-y;
     box-sizing: border-box;
+    font-family: 'San Francisco', -apple-system, BlinkMacSystemFont,
+        'Segoe UI Adjusted', 'Segoe UI', 'Liberation Sans', sans-serif;
+    font-weight: 700;
 }
 
+:root {
+    /* colors */
+    --grey: #a5a5a5;
+    --light-black: #333;
+    --orange: #f1a33b;
+    --white: #fff;
+    --black: #000;
+    /* transition */
+    --main-transition: all 0.3s;
+}
+
+html,
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    color: #fff;
+    max-width: 45rem;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    font-size: 62.5%;
+    background-color: var(--black);
+    color: var(--white);
 }
 
-/* Add your css  */
+input {
+    outline: none;
+    border: none;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-gray {
+    background-color: var(--grey);
+}
+
+.btn-orange {
+    background-color: var(--orange);
+}
+
+.btn-black {
+    background-color: var(--light-black);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    height: 40%;
+    color: var(--white);
+    background-color: var(--black);
+    font-size: 8rem;
+    width: 100%;
+    text-align: right;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.buttons {
+    padding: 1rem;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    max-height: 55rem;
+}
+
+.btn {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+@media (max-width: 375px) {
+    .btn {
+        font-size: 2rem;
+    }
+}
+
+.txt-black {
+    color: var(--black);
+}
+
+.btn:hover {
+    opacity: 0.7;
+    transition: var(--main-transition);
+}
+
+@media (max-width: 450px) {
+    .btn:hover {
+        opacity: 0.6;
+        transition: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .btn {
+        font-size: 2.7rem;
+    }
+}
+
+.btn:focus {
+    border-radius: 2.5rem;
+    opacity: 0.7;
+    transition: all ease;
+}
+
+#zero {
+    grid-column: span 2;
+}
+
+.icon::before,
+.icon::after {
+    font-family: 'Font Awesome 6 Free';
+}
